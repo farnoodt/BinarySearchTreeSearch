@@ -14,10 +14,10 @@ namespace BinarySearchTree
                 return false;
             if (root.data == item)
                 return true;
-            else if (root.data < item)
-                BinarySearchTreeSearch(root.left, item);
+            else if (root.data > item)
+                return BinarySearchTreeSearch(root.left, item);
             else
-                BinarySearchTreeSearch(root.right, item);
+                return BinarySearchTreeSearch(root.right, item);
 
             return false;
         }
